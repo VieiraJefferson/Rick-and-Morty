@@ -1,3 +1,4 @@
+  <img src="https://cdn.discordapp.com/attachments/1014678461979303976/1024040452556587029/rick-and-morty.png" />
 # Rick-and-Morty
 
 

@@ -29,7 +29,7 @@ Este projeto tem o intuito de trazer uma lista com os personagens da animação 
    * [Sobre](#sobre)
    * [Quem Faz](#-quem-faz)
    * [Status](#status)
-   * [Objetivo do Projeto](#objetivo-do-projeto)
+   * [Prints](#Prints-do-projeto)
    * [Link para Acessar](#link-para-acessar)
    * [Rodando o Projeto](#rodando-o-projeto)
    * [Sobre a Licença](#sobre-a-licença)

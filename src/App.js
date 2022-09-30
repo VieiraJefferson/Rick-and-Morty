@@ -21,7 +21,7 @@ function App() {
   const getAllCharacters=()=>{
     axios.get("https://rickandmortyapi.com/api/character")
     .then((response)=>setCharacters(response.data.results))
-    .catch((error)=> console.log("deu ruim", error.response))
+    .catch((error)=> console.log( error.response))
   }
 
   useEffect(() => {

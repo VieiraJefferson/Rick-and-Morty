@@ -18,29 +18,57 @@ export function HomePage(props) {
   const { changePage } = props;
  
 
-  const renderList = characters
-    .filter(char => query === "" || char.name.toLowerCase().includes(query))
+  // const renderList = characters
+  //   .filter(char => query === "" || char.name.toLowerCase().includes(query))
     
-    .sort((a, b) =>
-      (orderParam === "" || orderParam === "cresc" )&& a.name > b.name ? 1 : -1
-    )
-    .sort((a, b) =>
-      (orderParam === "" || orderParam === "desc") && a.name > b.name ? -1 : 1
-    )
-    .map((char) => {
-      return (
-        <Card
-          key={char.id}
-          id={char.id}
-          img={char.image}
-          name={char.name}
-          species={char.species}
-          removeCharacter={removeCharacter}
-          changePage={changePage}
-        />
-      );
-    });
+  //   .sort((a, b) =>
+  //     (orderParam === "" || orderParam === "cresc" )&& a.name > b.name ? 1 : -1
+  //   )
+  //   .sort((a, b) =>
+  //     (orderParam === "" || orderParam === "desc") && a.name > b.name ? -1 : 1
+  //   )
+  //   .map((char) => {
+  //     return (
+  //       <Card
+  //         key={char.id}
+  //         id={char.id}
+  //         img={char.image}
+  //         name={char.name}
+  //         species={char.species}
+  //         removeCharacter={removeCharacter}
+  //         changePage={changePage}
+  //       />
+  //     );
+  //   });
 
+
+  const renderList = characters
+  .filter(
+    (char) =>
+      query === "" ||
+      char.name.toLowerCase().includes(query.toLowerCase()) // Busca case-insensitive
+  )
+  .sort((a, b) =>
+    (orderParam === "" || orderParam === "cresc") && a.name > b.name ? 1 : -1
+  )
+  .sort((a, b) =>
+    (orderParam === "" || orderParam === "desc") && a.name > b.name ? -1 : 1
+  )
+  .map((char) => {
+    return (
+      <Card
+        key={char.id}
+        id={char.id}
+        img={char.image}
+        name={char.name}
+        species={char.species}
+        removeCharacter={removeCharacter}
+        changePage={changePage}
+      />
+    );
+  });
+
+  
   return (
     <>
      <Header />
